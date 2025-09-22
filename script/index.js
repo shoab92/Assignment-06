@@ -9,7 +9,7 @@ function fetchJSON(url){
 }
 
 function setActiveCategoryBtn(btn){
-    document.querySelectorAll("#category-list.btn").forEach(b=>b.classList.remove("btn-active") )  ;
+    document.querySelectorAll("#category-list .btn").forEach(b=>b.classList.remove("btn-active") )  ;
     btn.classList.add("btn-active" );
 }
 
@@ -66,7 +66,12 @@ categories.forEach((cat)=>{
     const btn = document.createElement("button");
     btn.className = "btn btn-wide rounded-md bg-green-50 mt-2";
     // btn.innerText = cat.category;
-    btn.innerText = CATEGORY_NAMES[cat.id] || cat.category;
+btn.innerText = CATEGORY_NAMES[String(cat.id)] 
+    || cat.category 
+    || cat.category_name 
+    || cat.name 
+    || cat.title 
+    || `Category ${cat.id}`;
     btn.dataset.id = cat.id;
     btn.onclick = function(){
         setActiveCategoryBtn(this);
@@ -75,6 +80,7 @@ categories.forEach((cat)=>{
     container.appendChild(btn);
 })
 }
+
 
 // fot butttons name 
 const CATEGORY_NAMES = {
@@ -117,19 +123,22 @@ container.innerHTML = "";
 
 plants.forEach((tree) => {
     const card = document.createElement("div");
-    card.className =
-    "p-4 bg-white rounded-xl shadow flex flex-col items-center";
+    card.className = "p-2 bg-white rounded-xl shadow flex flex-col items-center justify-between h-[280px]";
+
 
     card.innerHTML = `
     <img src="${tree.image}" alt="${tree.name}" 
-        class="w-full h-40 object-cover rounded-md mb-3">
+        class="w-full h-32 object-cover rounded-md mb-3">
     <h2 class="text-lg font-bold">${tree.name}</h2>
     <p class="text-sm text-gray-600">${tree.category}</p>
-    <button onclick="loadTreeDetails(${tree.id})" 
-            class="btn mt-2 bg-green-200 rounded-3xl">
+    <div class="flex justify-between items-center w-full mt-2">
+        <span class="text-sm font-medium text-black">$${tree.price}</span>
+        <button class="px-3 py-1 bg-green-700 text-white  rounded hover:bg-green-600">
         Add to Cart
-    </button>
-    `;
+        </button>
+    </div>
+`;
+
 
 
     container.appendChild(card);

@@ -17,9 +17,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
-<body class="bg-green-50 min-h-screen">
+<body class="bg-green-50 overflow-x-hidden min-h-screen">
     <header class="w-full max-w-full h-[370px] mx-auto bg-green-100 flex flex-col">
         <div>
             <!-- logo -->
@@ -85,7 +86,7 @@
         <h1 class="title font-bold text-2xl sm:text-xl md:text-2xl mb-3 text-center">Choose Your Trees</h1>
 
 
-        <section class="w-full max-w-[1250px] min-h-[880px] mx-auto grid grid-cols-1 md:grid-cols-6 gap-4 p-2">
+        <section class="w-full max-w-[1250px] overflow-x-hidden min-h-[880px] mx-auto grid grid-cols-1 md:grid-cols-6 gap-4 p-2">
 
             <!-- Categories -->
             <div id="category-list"
@@ -96,7 +97,7 @@
 
             <!-- Tree Container -->
             <div id="tree-container"
-                class="md:col-span-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-[600px] md:h-[880px] overflow-y-auto p-2">
+                class="md:col-span-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-[600px] md:h-[880px] overflow-x-hidden overflow-y-auto p-2">
                 <!-- Trees will go here -->
             </div>
 
@@ -113,28 +114,34 @@
 
         </section>
 
-        <section class=" w-full max-w-[1000px] min-h-[500px] p-10 m-5 mt-10 rounded-xl">
-            <h1 class="font-bold text-2xl flex justify-center mb-10 ">About the Campaign</h1>
-            <div class="h-full w-full flex flex-cols-2 ">
-                <div class="h-full w-full ml-5 mr-10">
-                    <img src="/assets/about.png" alt="404 ! not found">
+        <section class="w-full max-w-[1000px] min-h-[500px] p-6 sm:p-10 m-5 mt-10 rounded-xl">
+            <h1 class="font-bold text-2xl flex justify-center mb-8 sm:mb-10 text-center">About the Campaign</h1>
+
+            <!-- Responsive flex container -->
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+
+                <!-- Image section -->
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <img src="/assets/about.png" alt="404 ! not found" class="w-full max-w-sm md:max-w-full rounded-lg">
                 </div>
 
-                <div class="flex flex-col justify-center items-left mr-5">
-                    <p>Green Earth is a global tree plantation initiative dedicated to fighting climate change. Since
-                        our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you help restore
-                        forests, create habitats for wildlife, and combat global warming.</p>
-                    <ul class="ml-5 list-disc">
+                <!-- Text section -->
+                <div class="w-full md:w-1/2 flex flex-col justify-center text-left mt-17 ">
+                    <p class="mb-4">
+                        Green Earth is a global tree plantation initiative dedicated to fighting climate change.
+                        Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign, you
+                        help restore forests, create habitats for wildlife, and combat global warming.
+                    </p>
+                    <ul class="ml-5 list-disc space-y-2">
                         <li>Restoration of natural habitats</li>
                         <li>Improvement of air quality</li>
                         <li>Support for local communities</li>
                     </ul>
-
                 </div>
+
             </div>
-
-
         </section>
+
     </main>
     <section class="flex flex-col items-center justify-center py-10 w-full bg-green-100 gap-8">
         <div>
