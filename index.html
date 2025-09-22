@@ -85,23 +85,34 @@
         <h1 class="title font-bold text-2xl sm:text-xl md:text-2xl mb-3 text-center">Choose Your Trees</h1>
 
 
-        <section class="w-full max-w-[1250px] min-h-[880px] grid grid-cols-6 gap-4">
+        <section class="w-full max-w-[1250px] min-h-[880px] mx-auto grid grid-cols-1 md:grid-cols-6 gap-4 p-2">
+
+            <!-- Categories -->
             <div id="category-list"
-                class="col-span-1 border-2 border-green-400 rounded-xl flex flex-col justify-left items-center p-4">
+                class="md:col-span-1 border-2 border-green-400 rounded-xl flex flex-col items-center p-4">
                 <h1 class="font-bold text-xl text-black my-5">Categories</h1>
+                <!-- Add category items here -->
             </div>
+
+            <!-- Tree Container -->
             <div id="tree-container"
-                class="col-span-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-[880px] overflow-y-auto p-2">
+                class="md:col-span-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 h-[600px] md:h-[880px] overflow-y-auto p-2">
+                <!-- Trees will go here -->
             </div>
-            <div id="cart-container" class="col-span-1 border-2 border-green-400 bg-white rounded-xl p-4 flex flex-col">
+
+            <!-- Cart -->
+            <div id="cart-container"
+                class="md:col-span-1 border-2 border-green-400 bg-white rounded-xl p-4 flex flex-col">
                 <h2 class="text-xl font-bold text-green-700 mb-4 flex items-center gap-2">
                     <i class="fa fa-shopping-cart"></i>Your Cart
                 </h2>
                 <div id="cart-items" class="flex flex-col gap-2"></div>
-                <div id="cart-total" class="mt-4 font-semibold text-green-800">Total: $0.00</div>-
+                <div id="cart-total" class="mt-4 font-semibold text-green-800">Total: $0.00</div>
                 <button class="btn bg-yellow-400 text-green-800 mt-4 w-full rounded-lg">Checkout</button>
             </div>
+
         </section>
+
         <section class=" w-full max-w-[1000px] min-h-[500px] p-10 m-5 mt-10 rounded-xl">
             <h1 class="font-bold text-2xl flex justify-center mb-10 ">About the Campaign</h1>
             <div class="h-full w-full flex flex-cols-2 ">
@@ -148,7 +159,8 @@
 
     <footer>
         <section class="h-[500px] w-full bg-green-700 p-10">
-            <div class="w-full sm:w-[400px] md:w-[500px] h-[300px] bg-white p-4 sm:p-6 rounded-xl shadow-lg mx-auto mb-0 flex flex-col justify-center">
+            <div
+                class="w-full sm:w-[400px] md:w-[500px] h-[300px] bg-white p-4 sm:p-6 rounded-xl shadow-lg mx-auto mb-0 flex flex-col justify-center">
                 <h2 class="text-2xl font-bold text-green-700 mb-4 text-center">Plant a Tree Form</h2>
                 <form class="flex flex-col gap-4">
                     <input type="text" placeholder="Your Name"
