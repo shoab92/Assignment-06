@@ -126,8 +126,8 @@ plants.forEach((tree) => {
     <h2 class="text-lg font-bold">${tree.name}</h2>
     <p class="text-sm text-gray-600">${tree.category}</p>
     <button onclick="loadTreeDetails(${tree.id})" 
-            class="btn mt-2 bg-green-200">
-        View Details
+            class="btn mt-2 bg-green-200 rounded-3xl">
+        Add to Cart
     </button>
     `;
 
